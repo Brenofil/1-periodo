@@ -18,7 +18,7 @@ public class Exercicio6 {
 
 			Scanner leitor = new Scanner(System.in);
 
-			System.out.println("Escreva um número de 0 a 99.999");
+			System.out.println("Escreva um número de 0 a 99.999.");
 
 			String numeroUsuario = leitor.next();
 
