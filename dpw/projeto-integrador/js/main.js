@@ -1,15 +1,18 @@
 var usuarioLogado = window.localStorage.getItem('usuarioLogado');
 
-console.log('usuarioLogado :: ', usuarioLogado);
+console.info('usuarioLogado :: ', usuarioLogado);
 
 if( !usuarioLogado ) {
-  console.log('usuarioLogado == null');
+  console.info('usuarioLogado == false');
   atualizarBotoesHome('hidden');
   document.getElementById("formLogin").style.visibility = 'visible';
-  document.getElementById("usuarioInfo").style.visibility = 'hidden';
+  document.getElementById("usuarioInfo").remove();
+  // limpa o carrosel de filmes
+  document.getElementById("carousel-1").remove();
+
 } else {
   document.getElementById("formLogin").remove();  
-  document.getElementById("nomeUsuario").innerHTML = "Seja Bem Vindo, " + window.localStorage.getItem('nomeUsuario');
+  document.getElementById("nomeUsuario").innerHTML = "Olá <a href=\"profile.html\">" + window.localStorage.getItem('nomeUsuario') + "</a>!&nbsp; seja bem-vindo.&nbsp;&nbsp;";
   atualizarBotoesHome('visible');
 }
 
@@ -22,8 +25,8 @@ function login () {
     return;
   }
 
-  console.log('login :: usuario', usuario);
-  console.log('login :: senha', senha);
+  console.info('login :: usuario', usuario);
+  console.info('login :: senha', senha);
 
   window.localStorage.setItem('usuarioLogado', true);
   window.localStorage.setItem('nomeUsuario', usuario.value);
@@ -35,8 +38,16 @@ function logout () {
 }
 
 function atualizarBotoesHome(status) {
-  document.getElementById('btnMeusFilmes').style.visibility = status;
-  document.getElementById('btnMinhasSeries').style.visibility = status;
-  document.getElementById('btnMinhasHQs').style.visibility = status;
-  document.getElementById('btnMeusLivros').style.visibility = status;
+  if(document.getElementById('btnMeusFilmes') != null){
+    document.getElementById('btnMeusFilmes').style.visibility = status;
+  }
+  if(document.getElementById('btnMinhasSeries') != null){
+    document.getElementById('btnMinhasSeries').style.visibility = status;
+  }
+  if(document.getElementById('btnMinhasHQs')){
+    document.getElementById('btnMinhasHQs').style.visibility = status;
+  }
+  if(document.getElementById('btnMeusLivros')){
+    document.getElementById('btnMeusLivros').style.visibility = status;
+  }
 }

@@ -43,3 +43,30 @@
 .titulos {
   color: #00B5B5;
 }
+
+.header-tabela {
+  background-color: #00B5B5;
+  color: #000;
+  text-align: center !important;
+}
+
+.fundo-cinza-claro {
+  background-color: #CECECE;
+  color: #000;
+}
+
+.div-arredondada {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px 25px 25px 25px;
+}
+
+.botao-arredondado {
+  border-radius: 15px;
+}
+
+.float-direita {
+  float: right;
+}

@@ -8,21 +8,15 @@
     <meta name="description" content="Rede social de cultura pop">
     <meta name="author" content="Breno Costa, Jasmine Guimarães.">
     <link rel="icon" href="favicon.ico">
-
     <title>Social Cultura Pop</title>
-
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Estilos do site -->
     <link href="./css/estilos.css" rel="stylesheet">
-
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="./css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="./css/offcanvas.css" rel="stylesheet">
-
   </head>
 
   <body class="fundo-pagina">
@@ -30,9 +24,7 @@
     <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed"
-                  data-toggle="collapse" data-target="#navbar"
-                  aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -47,7 +39,7 @@
             <li><a href="series.html">S&eacute;ries</a></li>
             <li><a href="hq.html">HQ's</a></li>
             <li><a href="livro.html">Livros</a></li>
-            <li class="active"><a href="forum.html">F&oacute;rum</a></li>
+            <li><a href="forum.html">F&oacute;rum</a></li>
           </ul>
           <!-- Form do login -->
           <form class="navbar-form navbar-right" id="formLogin">
@@ -73,42 +65,59 @@
 
     <div class="container">
 
-      <div class="row"> 
+      <!-- INICIO linha 1 -->
+      <div class="row">
         <div class="col-md-12">
-          <table class="table table-hover fundo-cinza-claro">
-            <thead>
-              <tr class="header-tabela">
-                <th class="col-md-2 centralizado">Categoria</th>
-                <th class="col-md-8 centralizado">Descri&ccedil;&atilde;o</th>
-                <th class="col-md-2 centralizado">Posts</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Filmes</td>
-                <td>Discuss&otilde;es sobre filmes.</td>
-                <td class="centralizado"><a href="forum-filmes.html">Visualizar <span class="badge">98</span></a></td>
-              </tr>
-              <tr>
-                <td>S&eacute;ries</td>
-                <td>Discuss&otilde;es sobre s&eacute;ries.</td>
-                <td class="centralizado"><a href="forum-series.html">Visualizar <span class="badge">89</span></a></td>
-              </tr>
-              <tr>
-                <td>HQs</td>
-                <td>Discuss&otilde;es sobre quadrinhos.</td>
-                <td class="centralizado"><a href="forum-hqs.html">Visualizar <span class="badge">48</span></a></td>
-              </tr>
-              <tr>
-                <td>Livros</td>
-                <td>Discuss&otilde;es sobre livros.</td>
-                <td class="centralizado"><a href="forum-livros.html">Visualizar <span class="badge">32</span></a></td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="row">
+            <div class="col-md-4">
+              <h2 class="centralizado">John Snow</h2>
+              <p class="centralizado">
+                <img src="./img/user-profile.jpg" alt="User Profile" class="img-circle pequena">
+              </p>
+            </div>
+            <div class="col-md-8">
+              <br><br><br><br>
+              <p>Idade: 62</p>
+              <p>E-mail: fulano@gmail.com</p>
+              <p>Facebook: https://www.facebook.com/fulano</p>
+              <p>Instagran: https://www.instagran.com/fulano</p>
+              <p>Twitter: https://www.twitter.com/fulano</p>
+            </div>
+          </div>
         </div>
       </div>
-      
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Favoritos</h3>
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#filmes" aria-controls="filmes" role="tab" data-toggle="tab">Filmes</a></li>
+            <li role="presentation"><a href="#series" aria-controls="series" role="tab" data-toggle="tab">S&eacute;ries</a></li>
+            <li role="presentation"><a href="#hqs" aria-controls="hqs" role="tab" data-toggle="tab">HQs</a></li>
+            <li role="presentation"><a href="#livros" aria-controls="livros" role="tab" data-toggle="tab">Livros</a></li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            
+            <div role="tabpanel" class="tab-pane active" id="filmes">
+              
+            </div>
+            
+            <div role="tabpanel" class="tab-pane" id="series">
+
+            </div>
+            
+            <div role="tabpanel" class="tab-pane" id="hqs">
+
+            </div>
+            
+            <div role="tabpanel" class="tab-pane" id="livros">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FIM linha 1 -->
+
       <hr>
 
       <footer>
