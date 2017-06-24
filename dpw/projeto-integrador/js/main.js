@@ -12,7 +12,7 @@ if( !usuarioLogado ) {
 
 } else {
   document.getElementById("formLogin").remove();  
-  document.getElementById("nomeUsuario").innerHTML = "Olá <a href=\"profile.html\">" + window.localStorage.getItem('nomeUsuario') + "</a>!&nbsp; seja bem-vindo.&nbsp;&nbsp;";
+  document.getElementById("nomeUsuario").innerHTML = "Olá <a href=\"profile.html\" class=\"texto-azul\"><strong>" + window.localStorage.getItem('nomeUsuario') + "</strong></a>!&nbsp; seja bem-vindo.&nbsp;&nbsp;";
   atualizarBotoesHome('visible');
 }
 
