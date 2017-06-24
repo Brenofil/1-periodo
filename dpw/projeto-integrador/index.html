@@ -30,9 +30,7 @@
     <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed"
-                  data-toggle="collapse" data-target="#navbar"
-                  aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -47,16 +45,24 @@
             <li><a href="series.html">S&eacute;ries</a></li>
             <li><a href="hq.html">HQ's</a></li>
             <li><a href="livro.html">Livros</a></li>
-            <li><a href="forum.html">F&oacuterum</a></li>
+            <li><a href="forum.html">F&oacute;rum</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
+          <!-- Form do login -->
+          <form class="navbar-form navbar-right" id="formLogin">
             <div class="form-group">
-              <input type="text" placeholder="E-mail" class="form-control">
+              <input type="text" placeholder="E-mail" class="form-control" id="usuario">
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Senha" class="form-control">
+              <input type="password" placeholder="Senha" class="form-control" id="senha">
             </div>
-            <button type="submit" class="btn btn-info">Entrar</button>
+            <button type="submit" class="btn btn-info" onclick="return login();">Entrar</button>
+          </form>
+          <!-- Form do login -->
+          <form class="navbar-form navbar-right" id="usuarioInfo">
+            <div class="form-group">
+              <span id="nomeUsuario"></span>
+            </div>
+            <button type="submit" class="btn btn-info" onclick="return logout();">Sair</button>
           </form>
         </div>
       </div>
@@ -69,7 +75,6 @@
       <div class="jumbotron">
         <div class="container">
           <h1>Seja bem vindo!</h1>
-          <!-- <p class="texto-azul"> -->
           <p>
             A *rede social* foi criada com a intenção de fornecer um mapa englobando os mais diversos pontos da cultura pop
             e guiando você na hora de consumir um filme, livro, série ou até mesmo uma história em quadrinhos. É com
@@ -79,33 +84,35 @@
       </div>
       <!-- FIM do jumbotron -->
 
-
-
       <!-- INICIO linha 1 -->
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
           <h2>Filmes</h2>
-          <img src="./img/filmes/star.jpg" alt="Star wars logo" class="img-circle pequena">
-          <p>Filmes mais vistos.oooooaoaoaoaoao aoaoaoaoaoaoaoaooaoa
-            aoaoaoaoaoaoaoaoaoaoaoaoao</p>
-          <p><a class="btn btn-custom" href="filmes.html" role="button">Mais sobre filmes &raquo;</a></p>
+          <div class="row">
+            <div class="col-md-6">
+              <p class="centralizado">
+                <img src="./img/filmes/star.jpg" alt="Star wars logo" class="img-circle pequena">
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+              <p><a class="btn btn-custom" href="filmes.html" role="button" id="btnMeusFilmes">Meus filmes &raquo;</a></p>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4">
-          <h2>Séries</h2>
-          <img src="./img/series/vikings.jpg" alt="Vikings serie logo" class="img-circle pequena">
-          <p>Séries mais vistas.oooooaoaoaoaoaoaoaoaoaoaoaoaoaooaoa
-            aoaoaoaoaoaoaoaoaoaoaoaoaoa </p>
-          <p>
-            <!-- <button type="button" class="btn btn-custom">Detalhes &raquo;</button> -->
-            <a class="btn btn-custom" href="series.html" role="button">Mais sobre séries &raquo;</a>
-          </p>
-        </div>
-        <div class="col-md-4">
-          <h2>HQ's</h2>
-          <img src="./img/hq/Comic.jpg" alt="Comic series logo" class="img-circle pequena">
-         <p>Histórias em quadrinhos mais lidas.oo oooaoaoaoaoaoaoaoaoaoaoaoaoaooaoa
-           aoaoaoaoaoaoaoaoaoaoaoaoaoaooaoaoaoa oaoaaooaoaoaaoaoaoaoao</p>
-          <p><a class="btn btn-custom" href="hq.html" role="button">Mais sobre quadrinhos &raquo;</a></p>
+        <div class="col-md-6">
+          <h2>S&eacute;ries</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <p class="centralizado">
+                <img src="./img/series/vikings.jpg" alt="Vikings serie logo" class="img-circle pequena">
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+              <p><a class="btn btn-custom" href="series.html" role="button" id="btnMinhasSeries">Minhas S&eacute;ries &raquo;</a></p>
+            </div>
+          </div>
         </div>
       </div>
       <!-- FIM linha 1 -->
@@ -113,15 +120,35 @@
       <!-- INICIO linha 2 -->
       <div class="row">
         <div class="col-md-6">
-          <h2>Livros</h2>
-          <img src="./img/livros/American.jpg" alt="American Gods logo" class="img-circle pequena">
-          <p>Livros mais lidos.oooooaoaoaoaoaoao aoaoaoaoaoaoaooaoa
-            aoaoaoaoao aoaoaoaoaoao aoaoaooaoaoaoao aoaaooaoaoaaoaoaoaoao </p>
-          <p><a class="btn btn-custom" href="livro.html" role="button">Mais sobre livros &raquo;</a></p>
+          <h2>HQs</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <p class="centralizado">
+                <img src="./img/hq/comic.jpg" alt="Comic series logo" class="img-circle pequena">
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+              <p><a class="btn btn-custom" href="hq.html" role="button" id="btnMinhasHQs">Minhas HQs &raquo;</a></p>
+            </div>
+          </div>
         </div>
-
+        <div class="col-md-6">
+          <h2>Livros</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <p class="centralizado">
+                <img src="./img/livros/American.jpg" alt="American Gods logo" class="img-circle pequena">
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+              <p><a class="btn btn-custom" href="livro.html" role="button" id="btnMeusLivros">Meus Livros &raquo;</a></p>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- FIM linha 2 -->
+      <!-- FIM linha 1 -->
 
       <hr>
 
@@ -131,6 +158,8 @@
 
     </div>
 
+    <!-- JavaScript da aplicacao -->
+    <script src="./js/main.js"></script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

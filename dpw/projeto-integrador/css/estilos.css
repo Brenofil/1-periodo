@@ -2,6 +2,10 @@
   width: 200px;
 }
 
+.centralizado {
+  text-align: center;
+}
+
 .fundo-pagina {
   /*background-color: #FF9900;*/
   /*background-color: #212121;*/
