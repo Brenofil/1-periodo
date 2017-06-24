@@ -8,8 +8,15 @@ if( !usuarioLogado ) {
   document.getElementById("formLogin").style.visibility = 'visible';
   document.getElementById("usuarioInfo").remove();
   // limpa o carrosel de filmes
-  document.getElementById("carousel-1").remove();
-
+  var carrossel = document.getElementById("carousel-1");  
+  if(carrossel !== null){
+    carrossel.remove();
+  }
+  // limpa a div do profile
+  var paginaProfile = document.getElementById("paginaProfile");
+  if(paginaProfile !== null){
+    paginaProfile.remove();
+  }
 } else {
   document.getElementById("formLogin").remove();  
   document.getElementById("nomeUsuario").innerHTML = "Olá <a href=\"profile.html\" class=\"texto-azul\"><strong>" + window.localStorage.getItem('nomeUsuario') + "</strong></a>!&nbsp; seja bem-vindo.&nbsp;&nbsp;";
