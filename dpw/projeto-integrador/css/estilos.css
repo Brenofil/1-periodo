@@ -1,0 +1,41 @@
+.pequena {
+  width: 200px;
+}
+
+.fundo-pagina {
+  /*background-color: #FF9900;*/
+  /*background-color: #212121;*/
+  background-color: #3E474F;
+  color: #ffffff;
+}
+
+.texto-azul {
+  color: #00B5B5;
+}
+
+.jumbotron {
+  background-color: #222222;
+}
+
+.jumbotron h1 {
+  /*background-color: #EFF0F1;*/
+  color: #00B5B5;
+}
+
+.btn-custom {
+  background-color: #00B5B5;
+  color: #222222;
+}
+
+.navbar-custom {
+  color: #00B5B5 !important;
+  /*background-color: #00B5B5;*/
+}
+
+.imagem-carrossel {
+  height: 200px !important;
+}
+
+.titulos {
+  color: #00B5B5;
+}
