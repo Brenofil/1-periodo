@@ -70,3 +70,12 @@
 .float-direita {
   float: right;
 }
+
+.assistidos {
+  width: 200px
+}
+
+.cadastro{
+  color: #00B5B5;
+  text-transform: uppercase;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Rede social de cultura pop">
+    <meta name="author" content="Breno Costa, Rayanne.">
+    <link rel="icon" href="favicon.ico">
+    <title>Social Cultura Pop</title>
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos do site -->
+    <link href="./css/estilos.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="./css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="./css/offcanvas.css" rel="stylesheet">
+  </head>
+
+  <body class="fundo-pagina">
+    <!-- INICIO da barra preta do topo -->
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand navbar-custom" href="index.html">POPSTOCK</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <!-- <li class="active"><a href="index.html">Home</a></li> -->
+            <li><a href="filmes.html">Filmes</a></li>
+            <li><a href="series.html">S&eacute;ries</a></li>
+            <li><a href="hq.html">HQ's</a></li>
+            <li><a href="livro.html">Livros</a></li>
+            <li><a href="forum.html">F&oacute;rum</a></li>
+          </ul>
+          <!-- Form do login -->
+          <form class="navbar-form navbar-right" id="formLogin">
+            <div class="form-group">
+              <input type="text" placeholder="Usu&aacute;rio" class="form-control" id="usuario">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Senha" class="form-control" id="senha">
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="return login();">Entrar</button>
+          </form>
+          <!-- Form do usuario logado -->
+          <form class="navbar-form navbar-right" id="usuarioInfo">
+            <div class="form-group">
+              <span id="nomeUsuario"></span>
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="return logout();">Sair</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- FIM da barra preta do topo -->
+
+    <!--INICIO form de cadastro-->
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+          <form>
+        <div class="form-group cadastro">
+          <label for="exampleInputEmail1">Insira o nome de usu&aacute;rio:</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Usu&aacute;rio">
+        </div>
+        <div class="form-group cadastro">
+          <label for="exampleInputPassword1">Insira sua senha:</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile" class="cadastro">Mete uma foto se quiser</label>
+          <input type="file" id="exampleInputFile">
+          <p class="help-block">Example block-level help text here.</p>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Clica nesse quadrado
+          </label>
+        </div>
+        <button type="submit" class="btn btn-default">Concluir cadastro</button>
+      </form>
+    </div>
+  </div>
+
+<!--FIM form de cadastro-->
+
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <hr>
+
+      <footer>
+        <div class="row">
+          <div class="col-md-12 col-md-offset-1">
+              <p>&copy; 2017 POPSTOCK - Unirio.</p>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    <!-- JavaScript da aplicacao -->
+    <script src="./js/main.js"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="./jquery.min.js"><\/script>')</script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./js/ie10-viewport-bug-workaround.js"></script>
+    <script src="./js/offcanvas.js"></script>
+  </body>
+</html>
