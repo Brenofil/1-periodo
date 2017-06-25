@@ -8,17 +8,17 @@ if( !usuarioLogado ) {
   document.getElementById("formLogin").style.visibility = 'visible';
   document.getElementById("usuarioInfo").remove();
   // limpa o carrosel de filmes
-  var carrossel = document.getElementById("carousel-1");  
+  var carrossel = document.getElementById("carousel-1");
   if(carrossel !== null){
     carrossel.remove();
   }
-  // limpa a div do profile
+  // limpa a div do profile 
   var paginaProfile = document.getElementById("paginaProfile");
   if(paginaProfile !== null){
     paginaProfile.remove();
   }
 } else {
-  document.getElementById("formLogin").remove();  
+  document.getElementById("formLogin").remove();
   document.getElementById("nomeUsuario").innerHTML = "Olá <a href=\"profile.html\" class=\"texto-azul\"><strong>" + window.localStorage.getItem('nomeUsuario') + "</strong></a>!&nbsp; seja bem-vindo.&nbsp;&nbsp;";
   atualizarBotoesHome('visible');
 }
@@ -26,7 +26,7 @@ if( !usuarioLogado ) {
 function login () {
   var usuario = document.getElementById("usuario");
   var senha = document.getElementById("senha");
-  
+
   if(usuario.value === '' || senha.value === ''){
     alert('Usuário e senha são campos obrigatórios.');
     return;
@@ -39,7 +39,7 @@ function login () {
   window.localStorage.setItem('nomeUsuario', usuario.value);
 }
 
-function logout () {  
+function logout () {
   window.localStorage.removeItem('usuarioLogado');
   window.localStorage.removeItem('nomeUsuario');
 }
