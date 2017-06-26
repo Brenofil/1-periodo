@@ -108,17 +108,17 @@ function cadastrarUsuario() {
 
   if(nomeUsuario.value === '' || loginUsuario.value === '' || senhaUsuario.value === '' || senhaUsuario2.value === '') {
     alert('Todos os campos do cadastro de usuário são obrigatórios.');
-    return;
+    return false;
   }
 
   if(loginUsuario.value.length < 5) {
     alert('O login do usuário deve possuir ao menos 5 caracteres.');
-    return;
+    return false;
   }
 
   if(senhaUsuario.value !== senhaUsuario2.value) {
     alert('Senhas não conferem.');
-    return;
+    return false;
   }
 
   var usuario = {
@@ -131,7 +131,7 @@ function cadastrarUsuario() {
 
   if (usuarioLocalStorage != null && usuarioLocalStorage.login != null) {
     alert('Usuário já cadastrado.');
-    return;
+    return false;
 
   } else {
     window.localStorage.setItem(usuario.login, JSON.stringify(usuario));
@@ -151,7 +151,7 @@ function cadastrarTopico () {
 
   if (nomeTopico.value == '' || descricaoTopico.value == '') {
     alert('Todos os campos são obrigatórios');
-    return;
+    return false;
   }
 
   var tabelaForumFilmes = document.getElementById("tabelaForumFilmes");
