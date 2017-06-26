@@ -9,7 +9,7 @@
     <meta name="author" content="Breno Costa, Rayanne.">
     <link rel="icon" href="favicon.ico">
 
-    <title>Social Cultura Pop</title>
+    <title>POPSTOCK</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -38,7 +38,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand navbar-custom" href="index.html">Social Cultura Pop</a>
+          <a class="navbar-brand navbar-custom" href="index.html">POPSTOCK</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -75,8 +75,8 @@
     <div class="container">
 
       <div class="row">
-        <div class="col-md-12">
-          <table class="table table-hover fundo-cinza-claro">
+        <div class="col-md-10 col-md-offset-1">
+          <table class="table table-hover fundo-cinza-claro" id="tabelaForumFilmes">
             <thead>
               <tr class="header-tabela">
                 <th class="col-md-8 centralizado">T&oacute;picos</th>
@@ -113,25 +113,63 @@
             </tbody>
           </table>
         </div>
+        <div class="col-md-1">
+        </div>
       </div>
 
-      <hr>
+      <div class="row" id="botaoIncluirTopico">
+        <div class="col-md-10 col-md-offset-1">
+          <button type="button" class="btn btn-primary float-direita" data-toggle="modal" data-target="#modalTopico">Adicionar&nbsp;<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+        </div>
+        <div class="col-md-1">
+        </div>
+      </div>
 
-      <footer>
-        <p>&copy; 2017 Rede Social Pop - Unirio.</p>
-      </footer>
+      <!-- Modal -->
+      <div class="row">
+        <div class="modal fade" id="modalTopico" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content fundo-pagina">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title cadastro" id="myModalLabel">Adicionar T&oacute;pico</h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="nomeTopico" class="cadastro">T&iacute;tulo:</label>
+                  <input type="text" class="form-control fundo-cinza-claro" id="nomeTopico" placeholder="T&iacute;tulo do t&oacute;pico">
+                </div>
+                <div class="form-group">
+                  <label for="descricaoTopico" class="cadastro">Descri&ccedil;&atilde;o:</label>
+                  <textarea id="descricaoTopico" class="form-control fundo-cinza-claro" rows="6" placeholder="insira uma pequena descri&ccedil;&atilde;o aqui...."></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary botao-arredondado" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary botao-arredondado" onclick="return cadastrarTopico()">Incluir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fim Modal -->
 
     </div>
 
+    <hr>
+
+    <footer>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <p>&copy; 2017 POPSTOCK - Unirio.</p>
+        </div>
+      </div>
+    </footer>
+
     <!-- JavaScript da aplicacao -->
     <script src="./js/main.js"></script>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="./jquery.min.js"><\/script>')</script>
+    <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./js/ie10-viewport-bug-workaround.js"></script>
     <script src="./js/offcanvas.js"></script>
   </body>
